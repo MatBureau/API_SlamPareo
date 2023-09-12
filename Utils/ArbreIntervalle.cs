@@ -117,8 +117,6 @@ namespace API
                 }
                 intervalTree = newTree;
             }
-
-            // Traverse the final tree to get the common availability intervals
             TraverseInOrder(intervalTree.Root, commonAvailability);
 
             return commonAvailability;

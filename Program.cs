@@ -12,20 +12,20 @@ class Program
         var host = new NancyHost(uri, new CustomBootstrapper());
         host.Start();
 
-        Console.WriteLine("En attente de requête");
-        while (true)
-        {
-            try
-            {
-                // Wait for the host to shutdown
-                Thread.Sleep(Timeout.Infinite);
-            }
-            catch (ThreadAbortException)
-            {
-                host.Stop();
-                break;
-            }
-        }
+        //Console.WriteLine("En attente de requête");
+        //while (true)
+        //{
+        //    try
+        //    {
+        //        // Wait for the host to shutdown
+        //        Thread.Sleep(Timeout.Infinite);
+        //    }
+        //    catch (ThreadAbortException)
+        //    {
+        //        host.Stop();
+        //        break;
+        //    }
+        //}
 
         // Example usage de l'arbre d'intervalle
         var availabilities = new List<List<TimeInterval>>
